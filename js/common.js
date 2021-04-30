@@ -37,6 +37,27 @@ function toggleNavigation(event) {
     }
 }
 
+function increaseFontSize() {
+  var current = parseInt($('html').css("font-size"), 10);
+  $('html').css("font-size", current + 1 + "px");
+}
+
+function decreaseFontSize() {
+  var current = parseInt($('html').css("font-size"), 10);
+  if (current >= 2) {
+    $('html').css("font-size", current - 1 + "px");
+  }
+}
+
+function changeExpanded(id) {
+  var current = $('#'+ id).attr("aria-expanded");
+  if (current == "true") {
+    $('#'+ id).attr("aria-expanded","false");
+  } else {
+    $('#'+ id).attr("aria-expanded","true");
+  }
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     var dropDownToggles =
         document.querySelectorAll('#nav-bar-content .dropdown-toggle');

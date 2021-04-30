@@ -10,12 +10,35 @@ html {
 body a,
 body div,
 body p {
-    color: #dfdfdf
+    color: #262626
 }
 
 body a:hover {
-    color: #cdcdcd
+    color: #2f67ff
 }
+
+h2 {
+  font-size: 1rem !important;
+  font-weight: bold
+}
+
+.bg-dark {
+  background-color: #000 !important
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255,255,255,0.8) !important;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: rgba(255,255,255, 1) !important;
+}
+
+.dropdown-item:focus, .dropdown-item:hover {
+    color: rgba(255,255,255,0.8) !important;
+    background-color: #262626 !important;
+}
+
 
 .title {
     font-size: 2rem;
