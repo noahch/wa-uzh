@@ -12,112 +12,115 @@
 </head>
 
 <body class="d-flex flex-column bg-light">
-    <div class="container-fluid d-none d-lg-block my-4 header">
-        <div class="container">
-            <div class="row no-gutters">
-                <div class="col-8 media">
-                    <img class="align-self-center mr-3 rounded-right logo" src="./img/logo.jpg">
-                    <div class="media-body align-self-center">
-                        <div class="mb-0 title">Lorem Ipsum
-                            <br>Institute of Technology
-                        </div>
-                    </div>
-                </div>
-                <div class="col-4">
-                    <div class="btn-toolbar justify-content-end">
-                        <div class="btn-group btn-group-sm">
-                            <button class="btn btn-dark font-increase-button" id="font-increase-button">A+</button>
-                            <button class="btn btn-dark font-decrease-button" id="font-decrease-button">A-</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+  <header class="container-fluid d-none d-lg-block my-4 header" role="banner">
+      <div class="container">
+          <div class="row no-gutters">
+              <div class="col-8 media">
+                  <img class="align-self-center mr-3 rounded-right logo" src="./img/logo.jpg">
+                  <div class="media-body align-self-center">
+                      <div class="mb-0 title">Lorem Ipsum
+                          <br>Institute of Technology
+                      </div>
+                  </div>
+              </div>
+              <div class="col-4">
+                  <div class="btn-toolbar justify-content-end">
+                      <div class="btn-group btn-group-sm">
+                          <button class="btn btn-dark font-increase-button" id="font-increase-button" onclick="increaseFontSize()" aria-label="Increase font size">A+</button>
+                          <button class="btn btn-dark font-decrease-button" id="font-decrease-button" onclick="decreaseFontSize()" aria-label="Decrease font size">A-</button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </header>
 
-    <div class="container-fluid bg-dark nav">
-        <div class="container">
-            <div class="navbar navbar-dark bg-dark navbar-expand-lg px-0">
-                <div class="navbar-brand d-lg-none">
+  <div class="container-fluid bg-dark nav">
+      <div class="container">
+          <nav id="navigation" class="navbar navbar-dark bg-dark navbar-expand-lg px-0" role="navigation">
+              <div class="navbar-brand d-lg-none">
+                  <a class="nav-link" href="./" role="button">
                     <img class="rounded-right" src="./img/logo.jpg" alt="Logo of the Lorem Ipsum Institute of Technology" width="40" height="40">
-                </div>
-                <button class="navbar-toggler" type="button">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="nav-bar-content">
-                    <div class="navbar-nav mr-auto">
-                        <div class="nav-item">
-                            <a class="nav-link" href="./">Homepage</a>
-                        </div>
-                        <div class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="nav-bar-faculties">Faculties</a>
-                            <div class="dropdown-menu">
-                                <div>
-                                    <a class="dropdown-item" href="./empty.html?title=Applied+sciences">Applied sciences</a>
-                                </div>
-                                <div>
-                                    <a class="dropdown-item" href="./empty.html?title=Architecture+%26+planning">Architecture &amp; planning</a>
-                                </div>
-                                <div>
-                                    <a class="dropdown-item" href="./empty.html?title=Construction+%26+environment">Construction &amp; environment</a>
-                                </div>
-                                <div>
-                                    <a class="dropdown-item" href="./empty.html?title=Engineering">Engineering</a>
-                                </div>
-                                <div>
-                                    <a class="dropdown-item" href="./empty.html?title=Health+%26+social+sciences">Health &amp; social sciences</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="nav-bar-education">Education &amp; research</a>
-                            <div class="dropdown-menu">
-                                <div>
-                                    <a class="dropdown-item" href="./empty.html?title=Bachelor">Bachelor</a>
-                                </div>
-                                <div>
-                                    <a class="dropdown-item" href="./empty.html?title=Master">Master</a>
-                                </div>
-                                <div>
-                                    <a class="dropdown-item" href="./empty.html?title=Continuing+education">Continuing education</a>
-                                </div>
-                                <div>
-                                    <a class="dropdown-item" href="./empty.html?title=Doctorate">Doctorate</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="nav-bar-industry">Industry &amp; partners</a>
-                            <div class="dropdown-menu">
-                                <div>
-                                    <a class="dropdown-item" href="./empty.html?title=Public+relations">Public relations</a>
-                                </div>
-                                <div>
-                                    <a class="dropdown-item" href="./empty.html?title=Commercialization">Commercialization</a>
-                                </div>
-                                <div>
-                                    <a class="dropdown-item" href="./empty.html?title=Sponsors+%26+partners">Sponsors &amp; partners</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="navbar-nav">
-                        <div class="nav-item">
-                            <a class="nav-link" href="./login.html">Login</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="d-lg-none">
-                <div class="btn-toolbar justify-content-end">
-                    <div class="btn-group btn-group-sm">
-                        <button class="btn btn-dark text-white font-increase-button" id="font-increase-button-1">A+</button>
-                        <button class="btn btn-dark text-white font-decrease-button" id="font-decrease-button-1">A-</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+                  </a>
+              </div>
+              <button class="navbar-toggler d-lg-none" type="button" aria-label="Open menu on small screens">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="nav-bar-content">
+                  <ul class="navbar-nav mr-auto">
+                      <li class="nav-item">
+                          <a class="nav-link" href="./" role="button">Homepage</a>
+                      </li>
+                      <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" id="nav-bar-faculties" aria-haspopup="true" aria-expanded="false" onclick="changeExpanded('nav-bar-faculties')" role="button">Faculties</a>
+                          <ul class="dropdown-menu" aria-label="Sub-Menu of Faculties">
+                              <li>
+                                  <a class="dropdown-item" href="./empty.html?title=Applied+sciences" role="button">Applied sciences</a>
+                              </li>
+                              <li>
+                                  <a class="dropdown-item" href="./empty.html?title=Architecture+%26+planning" role="button">Architecture &amp; planning</a>
+                              </li>
+                              <li>
+                                  <a class="dropdown-item" href="./empty.html?title=Construction+%26+environment" role="button">Construction &amp; environment</a>
+                              </li>
+                              <li>
+                                  <a class="dropdown-item" href="./empty.html?title=Engineering" role="button">Engineering</a>
+                              </li>
+                              <li>
+                                  <a class="dropdown-item" href="./empty.html?title=Health+%26+social+sciences" role="button">Health &amp; social sciences</a>
+                              </li>
+                          </ul>
+                      </li>
+                      <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" id="nav-bar-education" aria-haspopup="true" aria-expanded="false" onclick="changeExpanded('nav-bar-education')" role="button">Education &amp; research</a>
+                          <ul class="dropdown-menu" aria-label="Sub-Menu of Education and Research">
+                              <li>
+                                  <a class="dropdown-item" href="./empty.html?title=Bachelor" role="button">Bachelor</a>
+                              </li>
+                              <li>
+                                  <a class="dropdown-item" href="./empty.html?title=Master" role="button">Master</a>
+                              </li>
+                              <li>
+                                  <a class="dropdown-item" href="./empty.html?title=Continuing+education" role="button">Continuing education</a>
+                              </li>
+                              <li>
+                                  <a class="dropdown-item" href="./empty.html?title=Doctorate" role="button">Doctorate</a>
+                              </li>
+                          </ul>
+                      </li>
+                      <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" id="nav-bar-industry" aria-haspopup="true" aria-expanded="false" onclick="changeExpanded('nav-bar-industry')" role="button">Industry &amp; partners</a>
+                          <ul class="dropdown-menu" aria-label="Sub-Menu of Industry and Partners">
+                              <li>
+                                  <a class="dropdown-item" href="./empty.html?title=Public+relations" role="button">Public relations</a>
+                              </li>
+                              <li>
+                                  <a class="dropdown-item" href="./empty.html?title=Commercialization" role="button">Commercialization</a>
+                              </li>
+                              <li>
+                                  <a class="dropdown-item" href="./empty.html?title=Sponsors+%26+partners" role="button">Sponsors &amp; partners</a>
+                              </li>
+                          </ul>
+                      </li>
+                  </ul>
+                  <ul class="navbar-nav">
+                      <li class="nav-item">
+                          <a class="nav-link" href="./login.html" role="button">Login</a>
+                      </li>
+                  </ul>
+              </div>
+          </nav>
+          <div class="d-lg-none">
+              <div class="btn-toolbar justify-content-end">
+                  <div class="btn-group btn-group-sm mb-2">
+                      <button class="btn btn-dark text-white font-increase-button" id="font-increase-button-1" onclick="increaseFontSize()" aria-label="Increase font size">A+</button>
+                      <button class="btn btn-dark text-white font-decrease-button" id="font-decrease-button-1" onclick="decreaseFontSize()" aria-label="Decrease font size">A-</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
 
     <div class="container mt-4 text-center main" id="main">
         <h6 class="text-primary py-4 mb-4 title" id="title-placeholder">Loading...</h6>
