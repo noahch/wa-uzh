@@ -127,18 +127,18 @@
             <div class="col-12 col-md-5 mt-4 login">
                 <div class="p-4 mr-md-3 bg-white">
                     <div class="text-primary mb-4 title">Login</div>
-                    <div class="text-danger mb-4 d-none subtitle" id="login-error">Please correct the error(s)</div>
-                    <ul class="sr-only" id="login-error-list"></ul>
+                    <div class="text-danger mb-4 pb-2 d-none" id="login-error">
+                        <h2>Please correct the following error(s):</h2>
+                        <ul class="sr-only" id="login-error-list"></ul>
+                    </div>
                     <form id="login-form" novalidate>
                         <div class="form-group">
                             <input class="form-control" id="login-email-control" name="login-email-control" type="email" placeholder="Email" required required aria-required="true" style="position: relative; top: 10px;">
                             <label style="position: relative; top: -60px;" for="login-email-control">Email</label>
-                            <small class="invalid-feedback mb-1">Please provide a valid e-mail address</small>
                         </div>
                         <div class="form-group">
                             <input class="form-control" id="login-password-control" name="login-password-control" type="password" placeholder="Password" style="position: relative; top: 10px;">
                             <label style="position: relative; top: -60px;" for="login-password-control">Password</label>
-                            <small class="invalid-feedback mb-1">Please provide a valid password</small>
                         </div>
                         <div class="form-group">
                             <div class="form-check">
@@ -155,8 +155,10 @@
             <div class="col-12 col-md-7 mt-4 register">
                 <div class="p-4 bg-white">
                     <div class="text-primary mb-4 title">Create new account</div>
-                    <div class="text-danger mb-4 d-none subtitle" id="register-error">Please correct the error(s)</div>
-                    <ul class="sr-only" id="register-error-list"></ul>
+                    <div class="text-danger mb-4 d-none" id="register-error">
+                        <h2>Please correct the error(s):</h2>
+                        <ul class="sr-only" id="register-error-list"></ul>
+                    </div>
                     <form id="register-form" novalidate>
                         <fieldset>
                             <legend style="font-size: inherit;">
@@ -166,23 +168,19 @@
                                 <div class="form-group col-12 col-lg-6">
                                     <label for="register-first-name-control">First name</label>
                                     <input class="form-control" type="text" id="register-first-name-control" name="register-first-name-control" placeholder="First name" required aria-required="true">
-                                    <small class="invalid-feedback">Please provide a valid first name</small>
                                 </div>
                                 <div class="form-group col-12 col-lg-6">
                                     <label for="register-last-name-control">Last name</label>
                                     <input class="form-control" type="text" id="register-last-name-control" name="register-last-name-control" placeholder="Last name" required aria-required="true">
-                                    <small class="invalid-feedback">Please provide a valid last name</small>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="register-email-control">Email</label>
                                 <input class="form-control" id="register-email-control" name="register-email-control" type="email" placeholder="Email" required aria-required="true">
-                                <small class="invalid-feedback">Please provide a valid e-mail address</small>
                             </div>
                             <div class="form-group">
                                 <label for="register-password-control">Password</label>
                                 <input class="form-control" id="register-password-control" name="register-password-control" type="password" placeholder="Password" required aria-required="true" aria-describedby="register-password-help">
-                                <small class="invalid-feedback">Please provide a valid password</small>
                                 <small id="register-password-help" class="form-text text-muted">Your password must be 8-16 characters long and contain both letters and numbers.</small>
                             </div>
                             <div class="form-group">
@@ -194,7 +192,6 @@
                                     <option value="continuing">Continuing education</option>
                                     <option value="doctorate">Doctorate</option>
                                 </select>
-                                <small class="invalid-feedback">Please select a studdy programme</small>
                             </div>
                         </fieldset>
                         <fieldset>
