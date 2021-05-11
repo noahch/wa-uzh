@@ -193,13 +193,14 @@ function register(event) {
     var programme = document.getElementById('register-programme-control');
     if (programme.validity.valueMissing) {
         setInvalid(programme);
+        errorMessages.push(errorElement('register-programme-control', 'Please select a studdy programme'));
         hasError = true;
     } else if (!programme.validity.valid) {
         setInvalid(programme);
+        errorMessages.push(errorElement('register-programme-control', 'Please select a studdy programme'));
         hasError = true;
     } else {
         setValid(programme);
-        errorMessages.push(errorElement('register-programme-control', 'Please select a studdy programme'))
     }
 
     if (hasError) {

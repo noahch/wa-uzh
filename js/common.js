@@ -97,16 +97,29 @@ $(function() {
   $("a[role='button']").on('keyup', function(e) {
       if (e.which === 32) {
         console.log("here ");
+        e.stopPropagation();
         e.preventDefault();
         if($(this).hasClass( "dropdown-toggle" )){
           $(this).click();
           $(this).dropdown('toggle');
         }
         window.location = e.target.href;
+        return false;
       }
   });
 });
 
+function readAloud(aText) {
+  if ('speechSynthesis' in window) {
+    var msg = new SpeechSynthesisUtterance();
+    msg.text = aText
+    window.speechSynthesis.speak(msg);
+   // Speech Synthesis supported 🎉
+  }else{
+    // Speech Synthesis Not Supported 😣
+    alert("Sorry, your browser doesn't support text to speech!");
+  }
+}
 // document.addEventListener('focusin', onFocus);
 //
 // function onFocus(e) {
