@@ -120,16 +120,6 @@ function readAloud(aText) {
     alert("Sorry, your browser doesn't support text to speech!");
   }
 }
-// document.addEventListener('focusin', onFocus);
-//
-// function onFocus(e) {
-//   if(!$('#nav-bar-faculties > .dropdown-menu').find(e.target).length) {
-//     // $('.dropdown-menu').fadeToggle();
-//     // $('.dropdown-menu').toggleClass("open");
-//       alert();
-//         document.removeEventListener('focusin', onFocus);
-//   }
-// }
 
 
 document.addEventListener('DOMContentLoaded', function() {
