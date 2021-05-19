@@ -79,10 +79,20 @@ h2 {
     flex: 1 0 auto
 }
 
+
 .skip-link-container a, .skip-link-container a:visited {
   color: transparent !important;
 }
 
 .skip-link-container a:focus, .skip-link-container a:hover {
   color: #000 !important;
+}
+
+@media screen and (max-width: 991px) {
+  .skip-link-container{
+    background-color: #000 !important;
+  }
+  .skip-link-container a:focus, .skip-link-container a:hover {
+    color: #fff !important;
+  }
 }
